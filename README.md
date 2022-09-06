@@ -8,3 +8,5 @@ To have a fake api server - http://my-json-server.typicode.com/(user)/(repo)
 
 To create swagger api docs - https://editor.swagger.io/
 * example: swagger-editor-example.yaml
+
+To validate json - https://jsonlint.com/
