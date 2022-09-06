@@ -1,0 +1,49 @@
+openapi: 3.0.1
+info:
+  title: BerryGelan API
+  version: '1.0'
+  description: We are friendly banking API, trust us
+  termsOfService: www.berry-gelan.se/tos
+  contact:
+    email: support@berry-gelan.se
+    name: Support
+    url: www.berry-gelan.se/support
+  license:
+    name: Licensing
+    url: www.berry-gelan.se/licensing
+servers:
+  - url: http://my-json-server.typicode.com/BerryGelan/api
+    variables: {}
+    description: Core API
+paths:
+  /users:
+    summary: user level operations
+    description: create and read users
+    get:
+      summary: fetch users
+      description: retrieve users from server
+      operationId: fetchUsers
+      responses:
+        '2XX':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: "abc123"
+                  username:
+                    type: string
+                    example: "Tom"
+                  score:
+                    type: integer
+                    example: 123
+                  active:
+                    type: boolean
+                    example: true
+        default:
+          description: Default error sample response
+      tags:
+        - users
