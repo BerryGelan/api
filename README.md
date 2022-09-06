@@ -10,3 +10,5 @@ To create swagger api docs - https://editor.swagger.io/
 * example: swagger-editor-example.yaml
 
 To validate json - https://jsonlint.com/
+
+Swagger docs - https://swagger.io/specification/
