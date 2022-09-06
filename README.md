@@ -2,7 +2,7 @@
 API repo
 
 
-To have a fake api server - http://my-json-server.typicode.com/<user>/<repo>
+To have a fake api server - http://my-json-server.typicode.com/(user)/(repo)
 * example: http://my-json-server.typicode.com/BerryGelan/api
 * main page: https://my-json-server.typicode.com/typicode/demo
 
