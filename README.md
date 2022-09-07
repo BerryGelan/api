@@ -12,3 +12,5 @@ To create swagger api docs - https://editor.swagger.io/
 To validate json - https://jsonlint.com/
 
 Swagger docs - https://swagger.io/specification/
+
+Install JSON server - npm install -g json-server
