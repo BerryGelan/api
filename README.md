@@ -13,7 +13,7 @@ To validate json - https://jsonlint.com/
 Swagger docs - https://swagger.io/specification/
 
 
-# Local PI Server
+# Local API Server Setup
 * Download node binary 64 bit - https://nodejs.org/en/download/
 * add ENV variables:
   * NPM_HOME - C:\x-tools\node-16.16.0
