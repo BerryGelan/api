@@ -42,5 +42,8 @@ Swagger docs - https://swagger.io/specification/
 Data can be accessed via `Home` link
 ![Local Server](local-server-home.png?raw=true "Employee Data title")
 
+# References
 
-Instructor reference - https://github.com/bearc0025/api/blob/main/openapi.yaml
+* Instructor reference - https://github.com/bearc0025/api/blob/main/openapi.yaml
+* Pokemon API - https://pokeapi.co/
+* Star Wars API - https://swapi.dev/
