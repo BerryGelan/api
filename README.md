@@ -16,7 +16,7 @@ Swagger docs - https://swagger.io/specification/
 # Local API Server Setup
 * Download node binary 64 bit - https://nodejs.org/en/download/
 * add ENV variables:
-  * NPM_HOME - C:\x-tools\node-16.16.0
+  * NPM_HOME - C:\node-16.16.0
   * NODE_EXTRA_CA_CERTS - C:\Users\XXXX\ .certs\SEB_CA_Certs.pem
 * might need to update npm version - npm install -g npm@8.19.1
 * Install JSON server - npm install -g json-server
