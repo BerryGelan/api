@@ -13,4 +13,32 @@ To validate json - https://jsonlint.com/
 
 Swagger docs - https://swagger.io/specification/
 
-Install JSON server - npm install -g json-server
+
+# Local PI Server
+* Download node binary 64 bit - https://nodejs.org/en/download/
+* add ENV variables:
+  * NPM_HOME - C:\x-tools\node-16.16.0
+  * NODE_EXTRA_CA_CERTS - C:\Users\S8715B\.certs\SEB_CA_Certs.pem
+* might need to update npm version - npm install -g npm@8.19.1
+* Install JSON server - npm install -g json-server
+* Confirm JSON server is downloaded - npm list -g json-server (`-- json-server@0.17.0)
+* Run local api server - npx json-server -w db.json
+```
+
+  \{^_^}/ hi!
+
+  Loading db.json
+  Done
+
+  Resources
+  http://localhost:3000/users
+  http://localhost:3000/attempts
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+```
+Data can be accessed via `Home` link
+![Local Server](local-server-home.png?raw=true "Employee Data title")
