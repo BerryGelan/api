@@ -41,3 +41,6 @@ Swagger docs - https://swagger.io/specification/
 ```
 Data can be accessed via `Home` link
 ![Local Server](local-server-home.png?raw=true "Employee Data title")
+
+
+Instructor reference - https://github.com/bearc0025/api/blob/main/openapi.yaml
