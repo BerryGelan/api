@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: BerryGelan API
-  version: '1.0'
+  version: '1.0.0'
   description: We are friendly banking API, trust us
   termsOfService: www.berry-gelan.se/tos
   contact:
@@ -12,6 +12,9 @@ info:
     name: Licensing
     url: www.berry-gelan.se/licensing
 servers:
+  - url: http://localhost:3000/
+    variables: {}
+    description: local fake server
   - url: http://my-json-server.typicode.com/BerryGelan/api
     variables: {}
     description: Core API
@@ -29,21 +32,26 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  id:
-                    type: string
-                    example: "abc123"
-                  username:
-                    type: string
-                    example: "Tom"
-                  score:
-                    type: integer
-                    example: 123
-                  active:
-                    type: boolean
-                    example: true
+                $ref: '#/components/schemas/FullUser'
         default:
           description: Default error sample response
       tags:
         - users
+
+components:
+  schemas:
+    FullUser:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "abc123"
+        username:
+          type: string
+          example: "Tom"
+        score:
+          type: integer
+          example: 123
+        active:
+          type: boolean
+          example: true
