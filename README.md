@@ -1,6 +1,6 @@
 # API course playground repo
 
-Special thanks to @bearc0025 for introduction to API world!
+Special thanks to @bearc0025 [@bearc0025]( https://github.com/bearc0025 ) for introduction to API world!
 
 # Local API Server Setup
 * Download node binary 64 bit - https://nodejs.org/en/download/
