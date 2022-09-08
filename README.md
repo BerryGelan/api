@@ -102,6 +102,7 @@ Insomnia test env name (ITEN) - "OpenAPI" (env_env_7032d2)
 * example: openapi.yaml
 * https://jsonlint.com/
 * https://swagger.io/specification/
+* Insomnia plugins - https://insomnia.rest/plugins
 
 # Note
 
