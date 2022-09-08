@@ -1,0 +1,14 @@
+_id: env_env_7032d2a5f03d312bb5bdf4a59b453e4d579880cf_sub
+type: Environment
+parentId: env_7032d2a5f03d312bb5bdf4a59b453e4d579880cf
+modified: 1662551665221
+created: 1662551665221
+name: OpenAPI env
+data:
+  scheme: http
+  base_path: /BerryGelan/api
+  host: my-json-server.typicode.com
+dataPropertyOrder: null
+color: null
+isPrivate: false
+metaSortKey: 1662551665221

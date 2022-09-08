@@ -1,0 +1,166 @@
+_id: spc_a1f2a2aba2634a29a73610efd097ea31
+type: ApiSpec
+parentId: wrk_d887f7f009034f4baae93d46a3032af7
+modified: 1662650585463
+created: 1662551556313
+fileName: MyAPI
+contents: |
+  openapi: 3.0.1
+  info:
+    title: BerryGelan API
+    version: 1.0.0
+    description: We are friendly API, trust us
+    termsOfService: www.berry-gelan.se/tos
+    contact:
+      email: support@berry-gelan.se
+      name: Support
+      url: www.berry-gelan.se/support
+    license:
+      name: Licensing
+      url: www.berry-gelan.se/licensing
+  servers:
+    - url: http://localhost:3000/
+      variables: {}
+      description: local fake server
+    - url: http://my-json-server.typicode.com/{gitaccount}/{reponame}
+      variables:
+        gitaccount:
+          default: BerryGelan
+          enum:
+            - BerryGelan
+            - otheraccountname
+          description: various accounts
+        reponame:
+          default: api
+          enum:
+            - api
+            - other
+          description: repo name
+      description: server with variables
+  paths:
+    /users:
+      summary: user level operations
+      description: create and read users
+      get:
+        summary: fetch users
+        description: retrieve users from server
+        operationId: fetchUsers
+        responses:
+          '200':
+            $ref: '#/components/responses/UserArrayResponseBody'
+          default:
+            description: Default error sample response
+        tags:
+          - users
+      post:
+        summary: create user
+        description: store user on server
+        operationId: createUser
+        requestBody:
+          $ref: '#/components/requestBodies/UserPostBody'
+        responses:
+          '201':
+            $ref: '#/components/responses/UserArrayResponseBody'
+          default:
+            description: Default error sample response
+        tags:
+          - users
+    /users/{userId}:
+      summary: specific user operation
+      description: fetch, update, delete user
+      get:
+        summary: fetch user
+        description: fetch user by id
+        operationId: fetchUser
+        parameters:
+          - $ref: '#/components/parameters/UserId'
+        responses:
+          '200':
+            $ref: '#/components/responses/UserArrayResponseBody'
+          default:
+            description: Default error sample response
+        tags:
+          - users
+      delete:
+        summary: delete a user
+        description: remove a user from the server
+        operationId: deleteUser
+        parameters:
+          - $ref: '#/components/parameters/UserId'
+        responses:
+          default:
+            description: Default error sample response
+        tags:
+          - users
+      patch:
+        summary: update a user
+        description: update server data for user
+        operationId: updateUser
+        parameters:
+          - $ref: '#/components/parameters/UserId'
+        requestBody:
+          $ref: '#/components/requestBodies/UserPostBody'
+        responses:
+          '200':
+            $ref: '#/components/responses/UserRespBody'
+          default:
+            description: Default error sample response
+        tags:
+          - users
+  components:
+    parameters:
+      UserId:
+        name: userId
+        in: path
+        required: true
+        description: user id
+        schema:
+          type: string
+          example: 1234abc
+    responses:
+      UserArrayResponseBody:
+        description: user array
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserArray'
+      UserRespBody:
+        description: successful
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FullUser'
+    requestBodies:
+      UserPostBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostNewUser'
+    schemas:
+      UserArray:
+        type: array
+        items:
+          $ref: '#/components/schemas/FullUser'
+      PostNewUser:
+        type: object
+        properties:
+          username:
+            type: string
+            example: bear2133
+          score:
+            type: integer
+            example: 66
+            minimum: 0
+          active:
+            type: boolean
+            example: true
+      FullUser:
+        allOf:
+          - $ref: '#/components/schemas/PostNewUser'
+          - type: object
+            properties:
+              id:
+                type: string
+                example: 1234asdf
+contentType: yaml

@@ -1,0 +1,17 @@
+_id: ut_d36f0b600f4644d585a103418df70929
+type: UnitTest
+parentId: uts_14a7147de8914e569e2de3d8e5b642bd
+modified: 1662637113878
+created: 1662637047239
+requestId: req_wrk_d887f7f009034f4baae93d46a3032af731003c6a
+name: " Check Form"
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200, "not 200");
+
+  const body = JSON.parse(response1.data);
+
+  expect(body).to.be.an('array');
+  expect(body).to.have.lengthOf.greaterThan(0);
+  expect(body[0]).to.have.property('id');
+  expect(body[0]).to.have.property('username');
