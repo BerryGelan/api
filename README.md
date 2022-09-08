@@ -47,3 +47,4 @@ Data can be accessed via `Home` link
 * Instructor reference - https://github.com/bearc0025/api/blob/main/openapi.yaml
 * Pokemon API - https://pokeapi.co/
 * Star Wars API - https://swapi.dev/
+* Pet Store - https://petstore.swagger.io/v2/swagger.json
