@@ -17,8 +17,8 @@ jobs:
         with:
           inso-version: 2.4.0
       - name: Lint
-        run: inso lint spec "MyAPI" --ci --verbose
+        run: inso lint spec MyAPI --ci --verbose
       - name: Run test suites
-        run: inso run test "MyAPI" --env UnitTest --ci
+        run: inso run test MyAPI --env UnitTest --ci
       - name: Generate declarative config
-        run: inso generate config "MyAPI" --type declarative --ci
+        run: inso generate config MyAPI --type declarative --ci
