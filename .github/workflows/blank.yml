@@ -17,6 +17,6 @@ jobs:
         with:
           inso-version: 2.4.0
       - name: Lint
-        run: inso lint spec "MyAPI"--ci --verbose
+        run: inso lint spec "MyAPI" --ci --verbose
       - name: Run test suites
         run: inso run test "MyAPI" --env env_env_7032d2 --ci
