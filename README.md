@@ -76,7 +76,7 @@ Insomnia test env name (ITEN) - "OpenAPI" (env_env_7032d2)
 * https://github.com/BerryGelan/api/blob/main/.github/workflows/blank.yml
 
 * Start Commit > save under blank.yml name > when saved api/.github/workflows/blank.yml will be adde to repo
-* !!! Pul in Insomnia to keep in sync!
+* !!! Pull in Insomnia to keep in sync!
 
 # Make Insomnia init commit
 
@@ -106,7 +106,10 @@ Insomnia test env name (ITEN) - "OpenAPI" (env_env_7032d2)
 
 # Note
 
-* When working with Insomnia check proxy, off VPN - uncheck it
+* !!! Pull in Insomnia to keep in sync!
+* When working on VPN:
+  * un/check proxy settings in Insomnia
+  * enable/disable .npmrc proxy and registry parameters
 
 # Testing
 
