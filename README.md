@@ -1,3 +1,5 @@
+Some images not showing? Try refreshing window, often case when README's partially load image elements
+
 # API course playground repo
 
 Special thanks to [@bearc0025]( https://github.com/bearc0025 ) for introduction to API world!
