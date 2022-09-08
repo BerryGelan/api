@@ -1,17 +1,6 @@
-# api
-API repo
+# API course playground repo
 
-
-Online practice tool - http://my-json-server.typicode.com/(user)/(repo)
-* example: http://my-json-server.typicode.com/BerryGelan/api
-
-To create swagger api docs - https://editor.swagger.io/
-* example: swagger-editor-example.yaml
-
-To validate json - https://jsonlint.com/
-
-Swagger docs - https://swagger.io/specification/
-
+Special thanks to @bearc0025 for introduction to API world!
 
 # Local API Server Setup
 * Download node binary 64 bit - https://nodejs.org/en/download/
@@ -107,6 +96,12 @@ Insomnia test env name (ITEN) - "OpenAPI" (env_env_7032d2)
 * Pokemon API - https://pokeapi.co/
 * Star Wars API - https://swapi.dev/
 * Pet Store - https://petstore.swagger.io/v2/swagger.json
+* http://my-json-server.typicode.com/(user)/(repo)
+* example: http://my-json-server.typicode.com/BerryGelan/api
+* https://editor.swagger.io/
+* example: openapi.yaml
+* https://jsonlint.com/
+* https://swagger.io/specification/
 
 # Note
 
