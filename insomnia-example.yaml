@@ -23,7 +23,7 @@ servers:
           - BerryGelan
           - otheraccountname
         description: various accounts
-      api:
+      reponame:
         default: api
         enum:
           - api
@@ -74,25 +74,57 @@ paths:
           description: Default error sample response
       tags:
         - users
+    delete:
+      summary: delete a user
+      description: remove a user from the server
+      operationId: deleteUser
+      parameters:
+        - $ref: '#/components/parameters/UserId'
+      responses:
+        default:
+          description: Default error sample response
+      tags:
+        - users
+    patch:
+      summary: update a user
+      description: update server data for user
+      operationId: updateUser
+      parameters:
+        - $ref: '#/components/parameters/UserId'
+      requestBody:
+        $ref: '#/components/requestBodies/UserPostBody'
+      responses:
+        '200':
+          $ref: '#/components/responses/UserRespBody'
+        default:
+          description: Default error sample response
+      tags:
+        - users
 components:
   parameters:
     UserId:
       name: userId
       in: path
       required: true
+      description: user id
       schema:
         type: string
-        example: "1234abc"
+        example: 1234abc
   responses:
     UserArrayResponseBody:
-      description: user array response
+      description: user array
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/UserArray'
+    UserRespBody:
+      description: successful
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/FullUser'
   requestBodies:
     UserPostBody:
-      description: new user request
       required: true
       content:
         application/json:
@@ -103,6 +135,19 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/FullUser'
+    PostNewUser:
+      type: object
+      properties:
+        username:
+          type: string
+          example: bear2133
+        score:
+          type: integer
+          example: 66
+          minimum: 0
+        active:
+          type: boolean
+          example: true
     FullUser:
       allOf:
         - $ref: '#/components/schemas/PostNewUser'
@@ -110,16 +155,4 @@ components:
           properties:
             id:
               type: string
-              example: abc123
-    PostNewUser:
-      type: object
-      properties:
-        username:
-          type: string
-          example: Tom
-        score:
-          type: integer
-          example: 123
-        active:
-          type: boolean
-          example: true
+              example: 1234asdf
