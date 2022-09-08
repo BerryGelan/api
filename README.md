@@ -48,3 +48,7 @@ Data can be accessed via `Home` link
 * Pokemon API - https://pokeapi.co/
 * Star Wars API - https://swapi.dev/
 * Pet Store - https://petstore.swagger.io/v2/swagger.json
+
+# Testing
+
+* ChaiJS - https://www.chaijs.com/api/bdd/
