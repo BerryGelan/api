@@ -116,3 +116,13 @@ Insomnia test env name (ITEN) - "OpenAPI" (env_env_7032d2)
 # Testing
 
 * ChaiJS - https://www.chaijs.com/api/bdd/
+
+# Common errors
+
+```
+Error: getaddrinfo ENOTFOUND github.com
+    at __node_internal_captureLargerStackTrace (node:internal/errors:464:5)
+    at __node_internal_ (node:internal/errors:686:10)
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)
+```
+* Internet connection is gone, re-connect to the internet
