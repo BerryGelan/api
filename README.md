@@ -108,10 +108,11 @@ Insomnia test env name (ITEN) - "OpenAPI" (env_env_7032d2)
 
 # Note
 
-* !!! Pull in Insomnia to keep in sync!
-* When working on VPN:
-  * un/check proxy settings in Insomnia
-  * enable/disable .npmrc proxy and registry parameters
+* When working:
+  * disconnect from VPN
+  * uncheck proxy settings in Insomnia
+  * disable .npmrc proxy and registry parameters
+* Pull in Insomnia before every local commit to keep in sync!
 
 # Testing
 
